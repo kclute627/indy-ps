@@ -31,7 +31,7 @@
         grid-row: 2/3;
         justify-self: center;
         align-self: center;
-        margin-bottom: 18rem;
+        margin-bottom: 8rem;
         text-transform: capitalize;
         
         &-text{
@@ -45,4 +45,10 @@
             }
         }
     }
+}
+.blue{
+    color: $color-primary;
+}
+.red{
+    color: #cf1717;
 }
