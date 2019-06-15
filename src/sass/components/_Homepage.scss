@@ -3,10 +3,46 @@
     &-container{
         grid-column: 1/2;
         grid-row: 1/2;
-        
-
-        background-image: url(../Assets/capitol-820611_1920-min.jpg);
+        background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 100%), url(../Assets/capitol-820611_1920-min.jpg);
         background-repeat: no-repeat;
         background-position: center;
+
+        display: grid;
+        grid-template-columns: .15fr minmax(50rem, 1fr) .25fr;
+        grid-template-rows: auto minmax(30rem,75vh) minmax(5rem,15vh);
+    }
+
+    &-logo{
+        grid-column: 2/3;
+        grid-row: 1/2;
+        justify-self: start;
+        align-self: center;
+        
+
+        &-pic{
+            
+            height: 25rem;
+            width: 25rem;
+        }
+    }
+
+    &-main{
+        grid-column: 2/3;
+        grid-row: 2/3;
+        justify-self: center;
+        align-self: center;
+        margin-bottom: 18rem;
+        text-transform: capitalize;
+        
+        &-text{
+            font-size: 6rem;
+            line-height: 5.5rem;
+
+            &-1{
+                font-size: 4.5rem;
+                text-align: center;
+
+            }
+        }
     }
 }
