@@ -1,0 +1,12 @@
+.homepage{
+
+    &-container{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        
+
+        background-image: url(../Assets/capitol-820611_1920-min.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}

@@ -1,0 +1,7 @@
+.App{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(800px, 100vh) 45vh 55vh 55vh;
+}
