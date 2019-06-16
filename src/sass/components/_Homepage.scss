@@ -8,7 +8,7 @@
         background-position: center;
 
         display: grid;
-        grid-template-columns: .15fr minmax(50rem, 1fr) .25fr;
+        grid-template-columns: .15fr minmax(50rem, 1fr) .10fr;
         grid-template-rows: auto minmax(30rem,75vh) minmax(5rem,15vh);
     }
 
@@ -45,10 +45,4 @@
             }
         }
     }
-}
-.blue{
-    color: $color-primary;
-}
-.red{
-    color: #cf1717;
 }

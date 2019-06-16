@@ -1,0 +1,35 @@
+.nav{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-self: end;
+    align-self: center;
+
+    &-ul{
+        display: flex;
+        list-style-type: none;
+    }
+    &-item{
+        padding: .7rem 1.5rem;
+        font-size: 2rem;
+        cursor: pointer;
+        
+    }
+}
+
+.blue{    
+    &:after{
+        @include nav-list;
+        border-bottom: solid 2px $color-primary;
+    }  
+
+   
+}
+.red{
+    &:after{
+        @include nav-list;
+        border-bottom: solid 2px $color-secondary;  
+    }   
+}
+
+.blue:hover:after,
+.red:hover:after{ transform: scaleX(1); }
