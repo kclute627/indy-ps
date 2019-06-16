@@ -49,37 +49,27 @@
         }
     }
     &-btn{
-        padding: 1.5rem 3rem;
-        width: 17rem;
-        height: 5.8rem;
-        border-radius: 1000px;
+        @include button-large;
         border: none;
-        background-color: $color-primary;
-        color: #fff;
+        background-color: $color-primary;      
         
-        font-size: 2rem;
-        cursor: pointer;
+        
 
         &:focus{
             outline: none;
         }
         &:hover{
-            background-color: darken($color: $color-primary, $amount: 15%);
+            background-color: darken($color: $color-primary, $amount: 19%);
         }
 
 
         &-secondary{
             background-color: transparent;
-            border-radius: 1000px;
-            padding: 1.5rem 3rem;
-            width: 17rem;
-            height: 5.8rem;
-            font-size: 2rem;
-            border: solid 2px $color-primary;
-            color: #fff;
+            @include button-large;
+            border: solid 2px $color-primary;            
             margin-left: 1.5rem;
             margin-right: 3.5rem;
-            transition: all .3s;
+            
 
             &:hover{
                 background-color: $color-primary;

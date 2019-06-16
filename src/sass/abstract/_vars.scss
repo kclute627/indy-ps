@@ -8,3 +8,13 @@ $color-secondary: #cf1717;
         transform: scaleX(0);  
         transition: transform 250ms ease-in-out;
 }
+@mixin button-large{
+        cursor: pointer;
+        border-radius: 1000px;
+        padding: 1.5rem 3rem;
+        width: 17rem;
+        height: 5.8rem;
+        font-size: 2rem;
+        color: #fff;
+        transition: all .3s;
+}
