@@ -33,6 +33,8 @@
         align-self: center;
         margin-bottom: 8rem;
         text-transform: capitalize;
+        display: flex;
+        flex-direction: column;
         
         &-text{
             font-size: 6rem;
@@ -41,8 +43,59 @@
             &-1{
                 font-size: 4.5rem;
                 text-align: center;
+                margin-bottom: 3rem;
 
             }
+        }
+    }
+    &-btn{
+        padding: 1.5rem 3rem;
+        width: 17rem;
+        height: 5.8rem;
+        border-radius: 1000px;
+        border: none;
+        background-color: $color-primary;
+        color: #fff;
+        
+        font-size: 2rem;
+        cursor: pointer;
+
+        &:focus{
+            outline: none;
+        }
+        &:hover{
+            background-color: darken($color: $color-primary, $amount: 15%);
+        }
+
+
+        &-secondary{
+            background-color: transparent;
+            border-radius: 1000px;
+            padding: 1.5rem 3rem;
+            width: 17rem;
+            height: 5.8rem;
+            font-size: 2rem;
+            border: solid 2px $color-primary;
+            color: #fff;
+            margin-left: 1.5rem;
+            margin-right: 3.5rem;
+            transition: all .3s;
+
+            &:hover{
+                background-color: $color-primary;
+                color: #fff;
+            }
+
+        }       
+
+
+    }
+    &-button{
+
+        &-container{
+            display: flex;
+            justify-content: center;
+            height: 100%;
         }
     }
 }

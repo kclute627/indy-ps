@@ -25,6 +25,11 @@ class HomePage extends Component {
                 <div className="homepage-main">
                     <h1 className="homepage-main-text">Indiana’s Top Process Server </h1>
                     <h2 className="homepage-main-text-1">for the Past 20 Years </h2>
+                    <div className="homepage-button-container">
+                        <button className="homepage-btn">Contact Us</button>
+                        <button className="homepage-btn-secondary">Pricing</button>
+                    </div>
+                    
                 </div>
 
 
