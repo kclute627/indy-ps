@@ -6,6 +6,7 @@
         background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 100%), url(../Assets/capitol-820611_1920-min.jpg);
         background-repeat: no-repeat;
         background-position: center;
+        background-attachment: fixed;
 
         display: grid;
         grid-template-columns: .15fr minmax(50rem, 1fr) .10fr;

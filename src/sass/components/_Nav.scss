@@ -11,7 +11,17 @@
     &-item{
         padding: .7rem 1.5rem;
         font-size: 2rem;
+        color: #fff;
+
         cursor: pointer;
+        text-decoration: none;
+
+        &:focus,
+        &:visited{
+            outline: none;
+            color: #fff;
+            
+        }
         
     }
 }

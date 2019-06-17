@@ -10,11 +10,15 @@ class Nav extends Component {
 
         const navBar = (
             <ul className="nav-ul">
-                {nav.map((cur, i) => (
-                    <li
-                    key={i}
-                    className={i%2 === 0 ? 'nav-item blue' : "nav-item red"}>{cur}</li>
-                ))}
+                {nav.map((cur, i) => {
+                    const link = `#${cur}`
+                    return(
+                         <a
+                    href={link.toLowerCase()}                    key={i}
+                    className={i%2 === 0 ? 'nav-item blue' : "nav-item red"}>{cur}</a>
+                    )
+                   
+    })}
             </ul>
         )
 

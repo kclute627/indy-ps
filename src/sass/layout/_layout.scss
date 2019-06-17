@@ -3,5 +3,5 @@
     padding: 0;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: minmax(800px, 100vh) 45vh 55vh 55vh;
+    grid-template-rows: minmax(800px, 100vh) auto 55vh 55vh;
 }
