@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "node-sass": "^4.12.0",
+    "postcss-cli": "^6.1.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
@@ -25,9 +26,12 @@
       "not op_mini all"
     ],
     "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
+      "last 7 chrome version",
+      "last 7 firefox version",
+      "last 7 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.6.0"
   }
 }
