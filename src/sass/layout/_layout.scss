@@ -1,7 +1,8 @@
-.App{
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: minmax(800px, 100vh) auto 55vh 55vh;
+.App {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(80rem, 100vh) auto auto 50rem;
 }
+
