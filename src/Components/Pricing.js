@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import MapContainer from "./map";
+import PricingTool from "./PricingTool";
 
 class Pricing extends Component {
   render() {
@@ -30,10 +31,19 @@ class Pricing extends Component {
             <div className="pricing__info-text">Routine: $65.00</div>
           </div>
           <div className="pricing__def">
-            <div className="pricing__def-text">Same-Day: Attempts are made the same day the documents are received </div>
-            <div className="pricing__def-text">Rush: Attempts are made no less than 48 hours of receiving the documents </div>
-            <div className="pricing__def-text">Routine: Attempts are made 3-4 days of receiving the documents </div>
+            <div className="pricing__def-text">
+              Same-Day: Attempts are made the same day the documents are
+              received{" "}
+            </div>
+            <div className="pricing__def-text">
+              Rush: Attempts are made no less than 48 hours of receiving the
+              documents{" "}
+            </div>
+            <div className="pricing__def-text">
+              Routine: Attempts are made 3-4 days of receiving the documents{" "}
+            </div>
           </div>
+          <PricingTool />
         </div>
       </div>
     );
