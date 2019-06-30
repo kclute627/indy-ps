@@ -4,7 +4,7 @@
 
     background-color: rgb(197, 197, 197);
     position: relative;
-    padding: 3rem 0;
+    
     height: 100%;
   }
 
@@ -79,7 +79,8 @@
       color: #fff;
       background: $color-primary;
       transition: all 0.3s;
-      margin-bottom: 5rem;
+      margin-bottom: 11rem;
+      
       &:hover {
         background-color: darken($color-primary, 20%);
       }
