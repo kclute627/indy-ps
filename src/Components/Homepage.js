@@ -23,7 +23,7 @@ class HomePage extends Component {
             <a href="#contactus" className="">
               <button className="homepage-btn">Contact Us</button>
             </a>
-            <a href="">
+            <a href="#pricing">
               <button className="homepage-btn-secondary">Pricing</button>
             </a>
           </div>

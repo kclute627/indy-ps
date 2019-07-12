@@ -1,0 +1,47 @@
+.pricing {
+  &__searchResult {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+
+    &-1 {
+      grid-column: 1/-1;
+      grid-row: 1/2;
+    }
+    &-2 {
+      grid-column: 1/2;
+      justify-self: end;
+      margin-right: 5rem;
+    }
+    &-3 {
+      grid-column: 2/3;
+      justify-self: start;
+    }
+    &-4 {
+      grid-column: 1/2;
+      justify-self: end;
+      margin-right: 5rem;
+    }
+    &-5 {
+      grid-column: 2/3;
+      justify-self: start;
+    }
+    &-6 {
+      grid-column: 1/2;
+      justify-self: end;
+      margin-right: 5rem;
+    }
+    &-7 {
+      grid-column: 2/3;
+
+      justify-self: start;
+    }
+    &-8 {
+      grid-column: 1/-1;
+    }
+    &-9{
+        grid-column: 1/-1;
+        margin-top: 2rem;
+    }
+  }
+}

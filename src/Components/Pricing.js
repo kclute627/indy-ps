@@ -5,7 +5,7 @@ import PricingTool from "./PricingTool";
 class Pricing extends Component {
   render() {
     return (
-      <div className="pricing__container">
+      <div className="pricing__container" id="pricing">
         <div className="pricing__header">
           <h1 className="pricing__header-text">Pricing</h1>
           <div className="pricing__header-border" />
@@ -31,16 +31,17 @@ class Pricing extends Component {
             <div className="pricing__info-text">Routine: $65.00</div>
           </div>
           <div className="pricing__def">
-            <div className="pricing__def-text">
-              Same-Day: Attempts are made the same day the documents are
-              received{" "}
-            </div>
-            <div className="pricing__def-text">
-              Rush: Attempts are made no less than 48 hours of receiving the
-              documents{" "}
-            </div>
-            <div className="pricing__def-text">
-              Routine: Attempts are made 3-4 days of receiving the documents{" "}
+            <div className="pricing__def-box">
+              <div className="pricing__def-text">
+                <span className="blue-1">Same-Day:</span>{" "}
+                <span>
+                  Attempts are made the same day the documents are received
+                </span>{" "}
+                <span className="red-1">Rush:</span><span>Attempts are made no less
+                than 48 hours of receiving the documents</span> {" "}
+                <span className="blue-1">Routine:</span><span>Attempts are made 3-4
+                days of receiving the documents</span> {" "}
+              </div>
             </div>
           </div>
           <PricingTool />
