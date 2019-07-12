@@ -48,15 +48,13 @@ class PricingTool extends Component {
       searchResult = zipCodes.filter(cur => {
         if (cur.zip == finalZip) {
           return cur;
-          
-        }else if (cur.zip == finalZip){
+        } else if (cur.zip == finalZip) {
           return null;
         }
-        
       });
     }
-    
-    console.log(searchResult)
+
+    console.log(searchResult);
 
     return (
       <div className="pricing__tool">
@@ -88,18 +86,31 @@ class PricingTool extends Component {
                 We do serve in {searchResult[0].city}, Indiana
               </h1>
               <div className="pricing__searchResult-2">Same-Day</div>
-              <div className="pricing__searchResult-3">{searchResult[0].fees.sameDay}</div>
+              <div className="pricing__searchResult-3">
+                {searchResult[0].fees.sameDay}
+              </div>
               <div className="pricing__searchResult-4">Rush</div>
-              <div className="pricing__searchResult-5">{searchResult[0].fees.rush}</div>
+              <div className="pricing__searchResult-5">
+                {searchResult[0].fees.rush}
+              </div>
               <div className="pricing__searchResult-6">Routine</div>
-              <div className="pricing__searchResult-7">{searchResult[0].fees.routine}</div>
+              <div className="pricing__searchResult-7">
+                {searchResult[0].fees.routine}
+              </div>
               <div className="pricing__searchResult-8">
                 Please call us or email info@ccprocess.com to order
               </div>
             </div>
           ) : finalZip && searchResult.length == 0 ? (
-            <h1 className="pricing__searchResult-9" >Sorry we currently do not serve in that area</h1>
-          ): null}
+            <div className="pricing__searchResult">
+              <h1 className="pricing__searchResult-9">
+                Sorry we currently do not serve in that area
+              </h1>
+              <div className="pricing__searchResult-8">
+                Please call us or email info@ccprocess.com to order
+              </div>
+            </div>
+          ) : null}
         </div>
       </div>
     );
