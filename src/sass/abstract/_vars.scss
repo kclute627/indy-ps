@@ -17,6 +17,7 @@ $color-secondary: #cf1717;
   font-size: 2rem;
   color: #fff;
   transition: all 0.3s;
+  outline: none;
 }
 @mixin contactInput {
   width: 50%;

@@ -4,7 +4,7 @@ import logo from "../Assets/logo-white.png";
 
 class HomePage extends Component {
   state = {
-    nav: ["Services", "Contact Us", "Pricing", "About Us"]
+    nav: ["Services", "Contact Us", "Pricing"]
   };
 
   render() {

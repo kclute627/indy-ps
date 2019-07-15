@@ -104,10 +104,10 @@ class PricingTool extends Component {
           ) : finalZip && searchResult.length == 0 ? (
             <div className="pricing__searchResult">
               <h1 className="pricing__searchResult-9">
-                Sorry we currently do not serve in that area
+                Sorry we do not serve in that area
               </h1>
               <div className="pricing__searchResult-8">
-                Please call us or email info@ccprocess.com to order
+                Please call us or email info@ccprocess.com for a referral 
               </div>
             </div>
           ) : null}
