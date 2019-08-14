@@ -11,6 +11,17 @@
         display: grid;
         grid-template-columns: .15fr minmax(50rem, 1fr) .10fr;
         grid-template-rows: auto minmax(30rem,75vh) minmax(5rem,15vh);
+
+        @include respond(phone1){
+            background-attachment: scroll;
+            grid-template-columns: .15fr 1fr .10fr;
+            grid-template-rows: auto minmax(30rem,75vh) minmax(5rem,15vh);
+            padding-bottom: 15rem;
+           
+        }
+
+        
+        
     }
 
     &-logo{
@@ -36,6 +47,13 @@
         text-transform: capitalize;
         display: flex;
         flex-direction: column;
+
+        @include respond(phone1){
+            margin-bottom: 18rem;
+           
+        }
+
+        
         
         &-text{
             font-size: 6rem;

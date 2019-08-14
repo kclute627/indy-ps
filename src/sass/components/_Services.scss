@@ -50,6 +50,12 @@
         justify-content: space-between;
         margin: 0 16rem;
 
+        @include respond(phone1){
+            
+            
+            
+        }
+
 
         &-box{
             display: grid;
@@ -69,6 +75,11 @@
             &-text{
                 grid-row: 3/4;
                 text-align: justify;
+                @include respond(phone1){
+                    display: none;
+                    
+                    
+                }
             }
 
         }
