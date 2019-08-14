@@ -1,193 +1,151 @@
-.homepage{
+.homepage {
+  &-container {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.7) 0%,
+        rgba(0, 0, 0, 0.7) 100%
+      ),
+      url(../Assets/capitol-820611_1920-min.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
 
-    &-container{
-        grid-column: 1/2;
-        grid-row: 1/2;
-        background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 100%), url(../Assets/capitol-820611_1920-min.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-attachment: fixed;
+    display: grid;
+    grid-template-columns: 0.15fr minmax(50rem, 1fr) 0.1fr;
+    grid-template-rows: auto minmax(30rem, 75vh) minmax(5rem, 15vh);
 
-        display: grid;
-        grid-template-columns: .15fr minmax(50rem, 1fr) .10fr;
-        grid-template-rows: auto minmax(30rem,75vh) minmax(5rem,15vh);
+    @include respond(phone1) {
+      background-attachment: scroll;
+      grid-template-columns: 0.15fr 1fr 0.1fr;
 
-        @include respond(phone1){
-         
-            background-attachment: scroll;
-            grid-template-columns: .15fr 1fr .10fr;
-            grid-template-rows: auto minmax(30rem,75vh) minmax(5rem,15vh);
-            padding-bottom: 15rem;
-           
-        }
-        @include respond(phoneMedP){
-                   
-            grid-template-rows: .25fr 35vh;
-            padding-bottom: 1rem;
-           
-            
+      grid-template-rows: 25vh 75vh;
+    }
+    @include respond(phoneMedP) {
+      grid-template-rows: 0.25fr 35vh;
+      padding-bottom: 1rem;
+    }
+  }
 
-        }
-        
+  &-logo {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-self: start;
+    align-self: center;
 
-        
-        
+    &-pic {
+      height: 25rem;
+      width: 25rem;
+
+      @include respond(phone1) {
+        height: 15rem;
+        width: 15rem;
+      }
+    }
+  }
+
+  &-main {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 8rem;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+
+    @include respond(phone1) {
+      margin-bottom: 18rem;
+    }
+    @include respond(phoneMedP) {
+      margin-bottom: 1rem;
     }
 
-    &-logo{
-        grid-column: 2/3;
-        grid-row: 1/2;
-        justify-self: start;
-        align-self: center;
-       
-        
-        
+    &-text {
+      font-size: 6rem;
+      line-height: 5.5rem;
+      @include respond(phone1) {
+        font-size: 3rem;
+        line-height: 2.5rem;
+      }
+      @include respond(phoneMedP) {
+        text-align: center;
+        font-size: 2.5rem;
+        line-height: 4.5rem;
+      }
 
-        &-pic{
-            
-            height: 25rem;
-            width: 25rem;
+      &-1 {
+        font-size: 4.5rem;
+        text-align: center;
+        margin-bottom: 3rem;
 
-            @include respond(phone1){
-                height: 15rem;
-                width: 15rem;
-                
-                
-            }
+        @include respond(phone1) {
+          font-size: 2.5rem;
         }
+        @include respond(phoneMedP) {
+          text-align: center;
+          font-size: 3rem;
+          line-height: 2.5rem;
+        }
+      }
+    }
+  }
+  &-btn {
+    @include button-large;
+    border: none;
+    background-color: $color-primary;
+
+    @include respond(phone1) {
+      padding: 1rem 3rem;
+      width: 13rem;
+      height: 3.8rem;
+      font-size: 2rem;
+    }
+    @include respond(phoneMedP) {
+      margin-left: 3rem;
+      padding: 1rem 1rem;
+      font-size: 1.5rem;
     }
 
-    &-main{
-        grid-column: 2/3;
-        grid-row: 2/3;
-        justify-self: center;
-        align-self: center;
-        margin-bottom: 8rem;
-        text-transform: capitalize;
-        display: flex;
-        flex-direction: column;
-
-        @include respond(phone1){
-            margin-bottom: 18rem;
-            
-           
-        }
-        @include respond(phoneMedP){
-                   
-            margin-bottom: 1rem;
-           
-            
-
-        }
-
-        
-        
-        &-text{
-            font-size: 6rem;
-            line-height: 5.5rem;
-            @include respond(phone1){
-                
-                font-size: 3rem;
-                line-height: 2.5rem;
-                
-                
-            }
-            @include respond(phoneMedP){
-                text-align: center;
-                font-size: 2rem;
-                line-height: 2.5rem;
-                
-
-            }
-
-            &-1{
-                font-size: 4.5rem;
-                text-align: center;
-                margin-bottom: 3rem;
-
-                @include respond(phone1){
-                    font-size: 2.5rem;
-                    
-                    
-                }
-                @include respond(phoneMedP){
-                   
-                    text-align: center;
-                    font-size: 2rem;
-                    line-height: 2.5rem;
-                    
-    
-                }
-
-            }
-        }
+    &:focus {
+      outline: none;
     }
-    &-btn{
-        @include button-large;
-        border: none;
-        background-color: $color-primary;  
-        
-        @include respond(phone1){
-            padding: 1rem 3rem;
-            width: 13rem;
-            height: 3.8rem;
-            font-size: 1rem;
-            
-            
-        }
-        @include respond(phoneMedP){
-                   
-            margin-left: 4rem;
-           
-            
-
-        }
-
-       
-        
-        
-
-        &:focus{
-            outline: none;
-        }
-        &:hover{
-            background-color: darken($color: $color-primary, $amount: 19%);
-        }
-
-
-        &-secondary{
-            background-color: transparent;
-            @include button-large;
-            border: solid 2px $color-primary;            
-            margin-left: 1.5rem;
-            margin-right: 3.5rem;
-
-             
-        @include respond(phone1){
-            padding: 1rem 3rem;
-            width: 13rem;
-            height: 3.8rem;
-            font-size: 1rem;
-            
-            
-        }
-            
-
-            &:hover{
-                background-color: $color-primary;
-                color: #fff;
-            }
-
-        }       
-
-
+    &:hover {
+      background-color: darken($color: $color-primary, $amount: 19%);
     }
-    &-button{
 
-        &-container{
-            display: flex;
-            justify-content: center;
-            height: 100%;
-        }
+    &-secondary {
+      background-color: transparent;
+      @include button-large;
+      border: solid 2px $color-primary;
+      margin-left: 1.5rem;
+      margin-right: 3.5rem;
+
+      @include respond(phone1) {
+        padding: 1rem 3rem;
+        width: 13rem;
+        height: 3.8rem;
+        font-size: 1rem;
+      }
+      @include respond(phoneMedP) {
+        margin-left: 3rem;
+        padding: .75rem 1rem;
+        font-size: 1.5rem;
+      }
+
+      &:hover {
+        background-color: $color-primary;
+        color: #fff;
+      }
     }
+  }
+  &-button {
+    &-container {
+      display: flex;
+      justify-content: center;
+      height: 100%;
+    }
+  }
 }
