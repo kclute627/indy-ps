@@ -35,6 +35,13 @@
             
             height: 25rem;
             width: 25rem;
+
+            @include respond(phone1){
+                height: 15rem;
+                width: 15rem;
+                
+                
+            }
         }
     }
 
@@ -58,11 +65,24 @@
         &-text{
             font-size: 6rem;
             line-height: 5.5rem;
+            @include respond(phone1){
+                margin-top: 7rem;
+                font-size: 3rem;
+                line-height: 1.5rem;
+                
+                
+            }
 
             &-1{
                 font-size: 4.5rem;
                 text-align: center;
                 margin-bottom: 3rem;
+
+                @include respond(phone1){
+                    font-size: 2.5rem;
+                    
+                    
+                }
 
             }
         }
@@ -70,7 +90,16 @@
     &-btn{
         @include button-large;
         border: none;
-        background-color: $color-primary;      
+        background-color: $color-primary;  
+        
+        @include respond(phone1){
+            padding: 1rem 3rem;
+            width: 13rem;
+            height: 3.8rem;
+            font-size: 1rem;
+            
+            
+        }
         
         
 
@@ -88,6 +117,16 @@
             border: solid 2px $color-primary;            
             margin-left: 1.5rem;
             margin-right: 3.5rem;
+
+             
+        @include respond(phone1){
+            padding: 1rem 3rem;
+            width: 13rem;
+            height: 3.8rem;
+            font-size: 1rem;
+            
+            
+        }
             
 
             &:hover{
