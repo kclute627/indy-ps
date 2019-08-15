@@ -22,15 +22,16 @@
       grid-template-columns: 0 75vh;
     }
 
+   
+    @include respond(phone1) {
+      background-attachment: scroll;
+      grid-template-columns: 15% 65% 10%;
+
+      grid-template-rows: 25vh 75vh;
+    }
     @include respond(phoneMedP) {
       grid-template-rows: 0.25fr 35vh;
       padding-bottom: 1rem;
-    }
-    @include respond(phone1) {
-      background-attachment: scroll;
-      grid-template-columns: 0.15fr 1fr 0.1fr;
-
-      grid-template-rows: 25vh 75vh;
     }
   }
 
