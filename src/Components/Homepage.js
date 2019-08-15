@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Nav from "./nav";
+import Address from './Address';
 import logo from "../Assets/logo-white.png";
 
 class HomePage extends Component {
@@ -26,6 +27,12 @@ class HomePage extends Component {
             <a href="#pricing">
               <button className="homepage-btn-secondary">Pricing</button>
             </a>
+          </div>
+          <div className = "homepage_contact-phone">
+            <Address 
+            container= 'homepage__address'
+            header = 'homepage__address-header'
+            contactInfo ='homepage__address-info'/> 
           </div>
         </div>
       </div>

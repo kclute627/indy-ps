@@ -95,9 +95,8 @@
                 width: 100%;
                 justify-content: start;
                 align-content: start;
-                &:not(:last-child){
-                    margin: 0 1.5rem;
-                }
+                margin: 0 1.5rem;
+                
             }
 
             &-header{

@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import ReactSvg from "react-svg";
-import compass from "../Assets/svg/compass.svg";
-import email from "../Assets/svg/envelope.svg";
-import phone from "../Assets/svg/phone.svg";
+import Address from './Address';
+
 
 class Contact extends Component {
   state = {
@@ -18,6 +16,8 @@ class Contact extends Component {
   };
 
   submitHandler = () => {
+
+
     this.setState({
       name: "",
       email: "",
@@ -39,21 +39,11 @@ class Contact extends Component {
             </p>
           </div>
 
-          <div className="contact-box-text">
-            <h1 className="contact-box-form-header">Address</h1>
-            <div className="contact-info">
-              <ReactSvg src={compass} />
-              <p> 101 N. Main Street Indianapolis, In 40983 </p>
-            </div>
-            <div className="contact-info">
-              <ReactSvg src={phone} />
-              <p> 1-800-898-9088 </p>
-            </div>
-            <div className="contact-info">
-              <ReactSvg src={email} />
-              <p> info@ccprocess.com </p>
-            </div>
-          </div>
+          <Address 
+          container = "contact-box-text"
+          header ="contact-box-form-header"
+          contactInfo = "contact-info"/>
+            
           <div className="contact-box-form">
             <h1 className="contact-box-form-header">Send Us A Message</h1>
             <input
@@ -80,7 +70,7 @@ class Contact extends Component {
               
               className="contact-box-form-text"
             />
-            <button className="contact-box-button" onClick={this.submitHandler}>
+            <button className="contact-box-button" type = "submit" onClick={this.submitHandler}>
               Send Message
             </button>
           </div>

@@ -17,15 +17,20 @@
     grid-template-columns: 0.15fr minmax(50rem, 1fr) 0.1fr;
     grid-template-rows: auto minmax(30rem, 75vh) minmax(5rem, 15vh);
 
+    @include respond(iPad) {
+      grid-template-rows: 4  5%;
+      grid-template-columns: 0 75vh;
+    }
+
+    @include respond(phoneMedP) {
+      grid-template-rows: 0.25fr 35vh;
+      padding-bottom: 1rem;
+    }
     @include respond(phone1) {
       background-attachment: scroll;
       grid-template-columns: 0.15fr 1fr 0.1fr;
 
       grid-template-rows: 25vh 75vh;
-    }
-    @include respond(phoneMedP) {
-      grid-template-rows: 0.25fr 35vh;
-      padding-bottom: 1rem;
     }
   }
 
@@ -55,25 +60,34 @@
     text-transform: capitalize;
     display: flex;
     flex-direction: column;
-
-    @include respond(phone1) {
-      margin-bottom: 18rem;
+    @include respond(iPad) {
+        justify-self: start;
+        align-self: start;
     }
+    
     @include respond(phoneMedP) {
       margin-bottom: 1rem;
+    }
+    @include respond(phone1) {
+      margin-bottom: 18rem;
     }
 
     &-text {
       font-size: 6rem;
       line-height: 5.5rem;
-      @include respond(phone1) {
-        font-size: 3rem;
-        line-height: 2.5rem;
+      @include respond(iPad) {
+        
       }
+      
       @include respond(phoneMedP) {
         text-align: center;
         font-size: 2.5rem;
         line-height: 4.5rem;
+        padding-top: 7rem;
+      }
+      @include respond(phone1) {
+        font-size: 3rem;
+        line-height: 2.5rem;
       }
 
       &-1 {
@@ -131,7 +145,7 @@
       }
       @include respond(phoneMedP) {
         margin-left: 3rem;
-        padding: .75rem 1rem;
+        padding: 0.75rem 1rem;
         font-size: 1.5rem;
       }
 
@@ -146,6 +160,38 @@
       display: flex;
       justify-content: center;
       height: 100%;
+    }
+  }
+  &_contact-phone {
+  }
+
+  &__address {
+    &-header {
+      display: none;
+    }
+    &-info {
+      display: none;
+      @include respond(phoneMedP) {
+        display: grid;
+        grid-template-columns: 3.2rem 50%;
+        grid-template-rows: 55%;
+
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        margin-top: 2rem;
+        grid-column-gap: 2rem;
+      }
+
+      & svg {
+        @include respond(phoneMedP) {
+          fill: #fff;
+          height: 3.2rem;
+          width: 3.2rem;
+          justify-self: center;
+          align-self: center;
+        }
+      }
     }
   }
 }

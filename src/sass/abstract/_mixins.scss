@@ -6,7 +6,13 @@
         @media(max-width: 22.5em){@content};   // 360px 
     }
     @if $breakpoint == phoneMedP {
-        @media(max-width: 26.5em){@content};   // 375px 
+        @media(max-width: 25.5em){@content};   
+    }
+    @if $breakpoint == phone1 {
+        @media(max-width: 29.5em){@content};
+    }
+    @if $breakpoint == iPad {
+        @media only screen and(min-width : 768px) and (max-width : 1024px){@content}
     }
    
 
