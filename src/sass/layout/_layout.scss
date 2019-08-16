@@ -22,7 +22,7 @@
 
 @include respond(phoneSmall){
   grid-template-columns: 100%;
-  grid-template-rows: 70vh auto auto auto;
+  grid-template-rows: auto auto auto auto;
   
 }
  
