@@ -18,19 +18,21 @@
     grid-template-rows: auto minmax(30rem, 75vh) minmax(5rem, 15vh);
 
     @include respond(iPad) {
-      grid-template-rows: 4  5%;
-      grid-template-columns: 0 75vh;
-    }
-
-   
-    @include respond(phone1) {
-      background-attachment: scroll;
-      grid-template-columns: 15% 65% 10%;
-
-      grid-template-rows: 25vh 75vh;
-    }
-    @include respond(phoneMedP) {
       grid-template-rows: 0.25fr 35vh;
+      grid-template-columns: 0 75vh;
+      padding-bottom: 5rem;
+      background: green;
+    }
+
+    @include respond(phone1) {
+      grid-template-columns: 0 0.58fr 0;
+      grid-template-rows: auto 70vh;
+    }
+
+    @include respond(phoneMedP) {
+      grid-template-rows: auto 75vh;
+      grid-template-columns: 0;
+
       padding-bottom: 1rem;
     }
   }
@@ -46,8 +48,8 @@
       width: 25rem;
 
       @include respond(phone1) {
-        height: 15rem;
-        width: 15rem;
+        height: 20rem;
+        width: 20rem;
       }
     }
   }
@@ -62,33 +64,35 @@
     display: flex;
     flex-direction: column;
     @include respond(iPad) {
-        justify-self: start;
-        align-self: start;
-    }
-    
-    @include respond(phoneMedP) {
-      margin-bottom: 1rem;
+      justify-self: start;
+      align-self: start;
     }
     @include respond(phone1) {
-      margin-bottom: 18rem;
+      justify-self: center;
+      align-self: start;
+
+      margin-top: 7rem;
+      grid-column: 2/-1;
+    }
+
+    @include respond(phoneMedP) {
+      margin-bottom: 1rem;
     }
 
     &-text {
       font-size: 6rem;
       line-height: 5.5rem;
       @include respond(iPad) {
-        
       }
-      
+
+      @include respond(phone1) {
+        font-size: 3rem;
+        line-height: 2.5rem;
+      }
       @include respond(phoneMedP) {
         text-align: center;
         font-size: 2.5rem;
         line-height: 4.5rem;
-        padding-top: 7rem;
-      }
-      @include respond(phone1) {
-        font-size: 3rem;
-        line-height: 2.5rem;
       }
 
       &-1 {
@@ -101,7 +105,7 @@
         }
         @include respond(phoneMedP) {
           text-align: center;
-          font-size: 3rem;
+          font-size: 2.5rem;
           line-height: 2.5rem;
         }
       }
@@ -113,13 +117,13 @@
     background-color: $color-primary;
 
     @include respond(phone1) {
-      padding: 1rem 3rem;
+      padding: 1rem 1rem;
       width: 13rem;
       height: 3.8rem;
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
     @include respond(phoneMedP) {
-      margin-left: 3rem;
+      margin-left: 4rem;
       padding: 1rem 1rem;
       font-size: 1.5rem;
     }
@@ -139,13 +143,13 @@
       margin-right: 3.5rem;
 
       @include respond(phone1) {
-        padding: 1rem 3rem;
+        padding: 1rem 1rem;
         width: 13rem;
         height: 3.8rem;
-        font-size: 1rem;
+        font-size: 1.5rem;
       }
       @include respond(phoneMedP) {
-        margin-left: 3rem;
+        margin-left: 2rem;
         padding: 0.75rem 1rem;
         font-size: 1.5rem;
       }
@@ -172,7 +176,7 @@
     }
     &-info {
       display: none;
-      @include respond(phoneMedP) {
+      @include respond(phone1) {
         display: grid;
         grid-template-columns: 3.2rem 50%;
         grid-template-rows: 55%;
@@ -180,17 +184,26 @@
         justify-content: center;
         align-content: center;
         align-items: center;
+        justify-items: center;
         margin-top: 2rem;
         grid-column-gap: 2rem;
+        @include respond(phoneMedP) {
+          margin-left: 4rem;
+        }
+
+        & p {
+          justify-self: start;
+        }
       }
 
       & svg {
-        @include respond(phoneMedP) {
+        @include respond(phone1) {
           fill: #fff;
           height: 3.2rem;
           width: 3.2rem;
           justify-self: center;
           align-self: center;
+          align-content: center;
         }
       }
     }

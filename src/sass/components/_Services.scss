@@ -12,7 +12,10 @@
         color: black;
         padding-bottom: 7rem;
         
-        
+        @include respond(phone1) {
+           
+
+        }
         @include respond(phoneMedP){
         grid-template-columns: .15fr minmax(35rem, 1fr) .15fr;
         padding-bottom: 1.5rem;
