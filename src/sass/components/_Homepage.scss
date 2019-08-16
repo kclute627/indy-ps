@@ -18,10 +18,8 @@
     grid-template-rows: auto minmax(30rem, 75vh) minmax(5rem, 15vh);
 
     @include respond(iPad) {
-      grid-template-rows: 0.25fr 35vh;
-      grid-template-columns: 0 75vh;
-      padding-bottom: 5rem;
-      background: green;
+      grid-template-columns: 1rem auto 1rem;
+      grid-template-rows: auto 70vh;
     }
 
     @include respond(phone1) {

@@ -3,6 +3,11 @@
     grid-row: 1/2;
     justify-self: end;
     align-self: center;
+
+    @include respond(iPad) {
+        grid-column: 2/3;
+        justify-self: center;
+      }
     @include respond(phone1){
         display: none;
         
