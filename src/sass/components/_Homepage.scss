@@ -33,6 +33,10 @@
 
       padding-bottom: 1rem;
     }
+    @include respond(phoneSmall){
+      
+      grid-template-columns: 1rem 55vh;
+    }
   }
 
   &-logo {
@@ -76,6 +80,9 @@
     @include respond(phoneMedP) {
       margin-bottom: 1rem;
     }
+    @include respond(phoneSmall){
+      margin-top: 0;
+    }
 
     &-text {
       font-size: 6rem;
@@ -92,6 +99,9 @@
         font-size: 2.5rem;
         line-height: 4.5rem;
       }
+      @include respond(phoneSmall){
+        font-size: 2rem;
+      }
 
       &-1 {
         font-size: 4.5rem;
@@ -105,6 +115,9 @@
           text-align: center;
           font-size: 2.5rem;
           line-height: 2.5rem;
+        }
+        @include respond(phoneSmall){
+          font-size: 2rem;
         }
       }
     }
