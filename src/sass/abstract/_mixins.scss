@@ -7,7 +7,7 @@
     }
    
     @if $breakpoint == phoneMedP {
-        @media(max-width: 25.5em){@content};   
+        @media(max-width: 26.5em){@content};   
     }
    
     @if $breakpoint == phone1 {
