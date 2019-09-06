@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Address from "./Address";
+import { delay } from "q";
 
 const encode = data => {
   return Object.keys(data)
@@ -34,7 +35,7 @@ class Contact extends Component {
           message: "",
           messageSent: true
         })
-      )
+      ).delay(5000).then(()=> this.setState({messageSent: false}))
       .catch(error => alert(error));
 
     e.preventDefault();
