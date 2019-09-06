@@ -35,14 +35,24 @@ class Contact extends Component {
           message: "",
           messageSent: true
         })
-      ).delay(5000).then(()=> this.setState({messageSent: false}))
+      ).then(()=> this.setState({messageSent: false}))
       .catch(error => alert(error));
 
     e.preventDefault();
   };
 
+  timer = ()=> this.setState({messageSent: false});
+
+  
+
   render() {
+   
+
     const { messageSent } = this.state;
+
+    if(messageSent){
+      setTimeout(timer, 5000);
+    }
     return (
       <div className="contact-container" id="contactus">
         <div className="contact-box">
