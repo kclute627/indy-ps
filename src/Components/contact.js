@@ -1,20 +1,18 @@
 import React, { Component } from "react";
-import Address from './Address';
+import Address from "./Address";
 
-
-
-const encode = (data) => {
+const encode = data => {
   return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&");
-}
-
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
 
 class Contact extends Component {
   state = {
     name: "",
     email: "",
-    message: ""
+    message: "",
+    messageSent: false
   };
 
   changeHandler = e => {
@@ -29,17 +27,21 @@ class Contact extends Component {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...this.state })
     })
-      .then(() => this.setState({
-        name: '',
-        email: '',
-        message: '',
-    }))
+      .then(() =>
+        this.setState({
+          name: "",
+          email: "",
+          message: "",
+          messageSent: true
+        })
+      )
       .catch(error => alert(error));
 
     e.preventDefault();
   };
 
   render() {
+    const { messageSent } = this.state;
     return (
       <div className="contact-container" id="contactus">
         <div className="contact-box">
@@ -53,11 +55,12 @@ class Contact extends Component {
             </p>
           </div>
 
-          <Address 
-          container = "contact-box-text"
-          header ="contact-box-form-header"
-          contactInfo = "contact-info"/>
-            
+          <Address
+            container="contact-box-text"
+            header="contact-box-form-header"
+            contactInfo="contact-info"
+          />
+
           <form name="contact" className="contact-box-form">
             <h1 className="contact-box-form-header">Send Us A Message</h1>
             <input
@@ -78,13 +81,20 @@ class Contact extends Component {
             />
             <textarea
               onChange={this.changeHandler}
-              value={this.state.message}              
+              value={this.state.message}
               name="message"
               placeholder="send us a message"
-              
               className="contact-box-form-text"
             />
-            <button className="contact-box-button" type = "submit" onClick={this.submitHandler}>
+            {messageSent ? (
+              <div className="message-sent">Message Sent!!</div>
+            ) : null}
+
+            <button
+              className="contact-box-button"
+              type="submit"
+              onClick={this.submitHandler}
+            >
               Send Message
             </button>
           </form>
