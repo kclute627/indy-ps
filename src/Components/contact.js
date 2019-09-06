@@ -2,6 +2,14 @@ import React, { Component } from "react";
 import Address from './Address';
 
 
+
+const encode = (data) => {
+  return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+}
+
+
 class Contact extends Component {
   state = {
     name: "",
@@ -15,14 +23,20 @@ class Contact extends Component {
     });
   };
 
-  submitHandler = () => {
+  submitHandler = e => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...this.state })
+    })
+      .then(() => this.setState({
+        name: '',
+        email: '',
+        message: '',
+    }))
+      .catch(error => alert(error));
 
-
-    this.setState({
-      name: "",
-      email: "",
-      message: ""
-    });
+    e.preventDefault();
   };
 
   render() {
@@ -44,7 +58,7 @@ class Contact extends Component {
           header ="contact-box-form-header"
           contactInfo = "contact-info"/>
             
-          <div className="contact-box-form">
+          <form name="contact" className="contact-box-form">
             <h1 className="contact-box-form-header">Send Us A Message</h1>
             <input
               type="text"
@@ -73,7 +87,7 @@ class Contact extends Component {
             <button className="contact-box-button" type = "submit" onClick={this.submitHandler}>
               Send Message
             </button>
-          </div>
+          </form>
         </div>
       </div>
     );
