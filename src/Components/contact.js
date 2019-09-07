@@ -51,7 +51,7 @@ class Contact extends Component {
     const { messageSent } = this.state;
 
     if(messageSent){
-      setTimeout(timer, 5000);
+      setTimeout(this.timer, 5000);
     }
     return (
       <div className="contact-container" id="contactus">
