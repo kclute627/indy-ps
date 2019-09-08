@@ -13,7 +13,7 @@ class Contact extends Component {
     name: "",
     email: "",
     message: "",
-    messageSent: false
+    messageSent: false,
   };
 
   changeHandler = e => {
@@ -35,13 +35,13 @@ class Contact extends Component {
           message: "",
           messageSent: true
         })
-      ).then(()=> this.setState({messageSent: false}))
+      ).then(setTimeout(()=> this.setState({messageSent: false}), 5000))
       .catch(error => alert(error));
 
     e.preventDefault();
   };
 
-  timer = ()=> this.setState({messageSent: false});
+  
 
   
 
@@ -50,9 +50,7 @@ class Contact extends Component {
 
     const { messageSent } = this.state;
 
-    if(messageSent){
-      setTimeout(()=> this.setState({messageSent: false}), 5000);
-    }
+  
     return (
       <div className="contact-container" id="contactus">
         <div className="contact-box">
