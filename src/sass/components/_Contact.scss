@@ -31,6 +31,10 @@
         text-transform: uppercase;
         font-size: 4rem;
         text-align: center;
+
+        @include respond(phoneMedP) {
+         font-size: 2.5rem;
+          }
       }
       &-text {
         font-size: 2rem;
@@ -39,7 +43,7 @@
         margin-top: 1.5rem;
         text-align: justify;
         @include respond(phoneMedP) {
-         margin-bottom: 2rem;
+         margin-bottom: 1rem;
          text-align: center
          }
       }
@@ -59,7 +63,7 @@
 
       @include respond(phoneMedP) {
         grid-column: 1/-1;
-        margin-top: 9rem;
+        margin-top: 3rem;
         align-self: center;
         justify-self: center;
        }
@@ -69,7 +73,7 @@
         margin-bottom: 1.5rem;
         border-bottom: 2px solid $color-secondary;
         @include respond(phoneMedP) {
-         font-size: 2.9rem;
+         font-size: 2.5rem;
          margin-top: 5rem;
          line-height: 3.5rem;
          padding-bottom: 1rem;
