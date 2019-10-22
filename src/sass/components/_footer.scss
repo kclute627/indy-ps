@@ -5,10 +5,20 @@
   padding: 4rem 0 6rem 0;
 
   &__contact {
+    @include respond(phoneMedP) {
+      text-align: center;
+      margin: 0 auto;
+      justify-content: center;
+      width: 100%;
+      margin-left: -4rem;
+    }
     &-info {
       display: flex;
       justify-content: space-around;
       margin: 0 25rem;
+      
+      
+     
     }
     &-list {
         text-decoration: none;
@@ -35,6 +45,9 @@
         font-size: 2rem;
         margin-bottom: 1rem;
         text-align: center;
+        @include respond(phoneMedP) {
+          display: none;
+        }
     }
     &-img{
         height: 9.5rem;
@@ -42,6 +55,9 @@
         margin: 0 2rem;
         
         text-align: center;
+        @include respond(phoneMedP) {
+          display: none;
+        }
     }
   }
 }
