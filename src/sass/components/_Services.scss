@@ -12,12 +12,13 @@
         color: black;
         padding-bottom: 7rem;
         
-        @include respond(phone1) {
-           
-
+        @media(max-width: 768px){
+            grid-template-columns: 2.5% 95% 2.5%;
+            padding-top: 2.5rem;
+            ;
         }
         @include respond(phoneMedP){
-        grid-template-columns: .15fr minmax(35rem, 1fr) .15fr;
+        grid-template-columns: 2.5% 95% 2.5%;
         padding-bottom: 1.5rem;
     }
     @include respond(phoneSmall){
@@ -53,6 +54,13 @@
             text-transform: uppercase; 
             padding-bottom: 1.5rem;
 
+            @media(max-width: 768px){
+                margin: 0;
+                margin-bottom: 1.5rem;
+               
+                width: 100%;
+            }
+
             @include respond(phoneMedP) {
                 
                 font-size: 3rem;
@@ -79,6 +87,10 @@
             text-align: justify;
             margin-bottom: 5.5rem;
 
+            @media(max-width: 768px){
+                margin: 0;
+            }
+
             @include respond(phoneMedP){
                 display: none;
             }
@@ -93,6 +105,10 @@
         display: flex;
         justify-content: space-between;
         margin: 0 16rem;
+
+        @media(max-width: 768px){
+            margin: 0;
+        }
 
         @include respond(phoneMedP){
             grid-column: 1/3;

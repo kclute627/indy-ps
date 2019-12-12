@@ -1,6 +1,6 @@
 .homepage {
   &-container {
-    grid-column: 1/2;
+    grid-column: 1/-1;
     grid-row: 1/2;
     background: linear-gradient(
         to bottom,
@@ -10,8 +10,8 @@
       url(../Assets/capitol-820611_1920-min.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
-    width: 100%;
+    
+    background-size: cover;
 
     display: grid;
     grid-template-columns: 0.15fr minmax(50rem, 1fr) 0.1fr;

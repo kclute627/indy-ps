@@ -5,6 +5,10 @@
   grid-template-columns: 1fr;
   grid-template-rows: 100vh auto auto auto;
   
+
+  @media(max-width: 768px){
+    grid-template-columns: 100%;
+}
   
   @include respond(phone1){
     grid-template-rows: 100vh;
